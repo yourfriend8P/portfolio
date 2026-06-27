@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green-brand: #2ebd7b; /* primary CTA green */
+  --color-green-dark: #1a9e63; /* hover state */
+  --color-text-dark: #1a1a2e; /* headings */
+  --color-text-muted: #6b7280; /* body copy */
+  --color-bg: #f8f9fa; /* page background */
+  --color-card: #ffffff;
+
+  --font-sans: "Montserrat", sans-serif;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
