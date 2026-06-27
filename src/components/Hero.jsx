@@ -1,4 +1,5 @@
 // components/Hero.jsx
+
 export default function Hero() {
   return (
     <section
@@ -16,10 +17,27 @@ export default function Hero() {
         Designing meaningful experiences that feel effortless
       </p>
       <div className="flex gap-4 justify-center mt-8">
-        <button className="bg-green-brand hover:bg-gray-200 px-6 py-3 rounded-full font-medium text-white ">
+        <button
+          className="bg-green-brand px-6 py-3 rounded-full font-medium text-white cursor-pointer 
+  transition-all duration-300 ease-in-out
+  hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(33,198,142,0.5)] hover:bg-green-dark"
+          onClick={() =>
+            document.getElementById("projects")?.scrollIntoView({
+              behavior: "smooth",
+            })
+          }
+        >
           View My Works
         </button>
-        <button className="border border-gray-800 px-6 py-3 rounded-full font-medium">
+        <button
+          className="border border-gray-800 px-6 py-3 rounded-full font-medium cursor-pointer  hover:bg-green-dark hover:text-white  hover:border-green-dark transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(33,198,142,0.5)]"
+          onClick={() => {
+            const link = document.createElement("a");
+            link.href = "/resume.pdf";
+            link.download = "PrabalShakyaCV.pdf";
+            link.click();
+          }}
+        >
           Download CV
         </button>
       </div>

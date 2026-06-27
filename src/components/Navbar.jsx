@@ -11,20 +11,27 @@ export default function Navbar() {
       </div>
       {/* Desktop links */}
       <ul className="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-        <li>
+        <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
           <a href="#home">Home</a>
         </li>
-        <li>
+        <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
           <a href="#about">About Me</a>
         </li>
-        <li>
+        <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
           <a href="#projects">Projects</a>
         </li>
-        <li>
+        <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
           <a href="#blog">Blog</a>
         </li>
       </ul>
-      <button className="bg-green-brand rounded-full px-5 py-2 text-sm font-medium hidden md:block shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] text-white">
+      <button
+        className="bg-green-brand rounded-full px-5 py-2 text-sm font-medium hidden md:block shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] text-white cursor-pointer hover:bg-green-dark transition-all duration-300 ease-in-out"
+        onClick={() =>
+          document.getElementById("contact")?.scrollIntoView({
+            behavior: "smooth",
+          })
+        }
+      >
         Contact Me
       </button>
       <button className="md:hidden" onClick={() => setOpen(!open)}>

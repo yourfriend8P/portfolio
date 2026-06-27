@@ -33,10 +33,16 @@ export default function About() {
           </p>
         </div>
         <div className="flex gap-3">
-          <button className="bg-green-brand text-white px-5 py-2 rounded-full text-sm">
+          <button
+            className="bg-green-brand text-white px-5 py-2 rounded-full text-sm hover:bg-green-dark cursor-pointer  transition-all duration-300 ease-in-out
+  hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(33,198,142,0.5)]"
+          >
             Contact Me
           </button>
-          <button className="border border-gray-300 px-5 py-2 rounded-full text-sm">
+          <button
+            className="border border-gray-300 px-5 py-2 rounded-full text-sm  transition-all duration-300 ease-in-out
+  hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(33,198,142,0.5)] hover:ring-1"
+          >
             Learn More
           </button>
         </div>
