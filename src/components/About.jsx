@@ -1,5 +1,5 @@
 // components/About.jsx
-import MyPhoto from "../assets/photo.png";
+import MyPhoto from "../assets/myphoto.jpeg";
 import { FaFacebookF, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const skills = [
@@ -49,7 +49,7 @@ export default function About() {
       </div>
 
       {/* Center: Profile card */}
-      <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center relative w-[400px] h-[520px]">
+      <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center relative w-100 h-130]">
         {/* Social icons top-right */}
         <div className="absolute top-8 right-8 flex flex-col gap-3">
           <a
@@ -111,7 +111,7 @@ export default function About() {
         ))}
       </div>
       <svg
-        className="absolute left-0 top-0 h-full w-auto"
+        className="absolute left-0 top-0 h-full w-auto hidden md:block"
         viewBox="-31 0 155 912"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -123,9 +123,8 @@ export default function About() {
         />
       </svg>
 
-      {/* Right decoration — horizontally flipped */}
       <svg
-        className="absolute right-0 top-0 h-full w-auto"
+        className="absolute right-0 top-0 h-full w-auto hidden md:block"
         viewBox="-31 0 155 912"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

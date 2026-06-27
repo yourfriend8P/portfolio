@@ -4,6 +4,7 @@ import {
   FaYoutube,
   FaInstagram,
   FaFacebook,
+  FaGithub,
 } from "react-icons/fa";
 import Logo from "../assets/logo.png"; // your corgi logo
 
@@ -28,31 +29,34 @@ export default function Footer() {
             {/* Social icons */}
             <div className="flex gap-3 mt-2">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/prabal-shakya-14267627a/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition-colors"
               >
                 <FaLinkedin className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://github.com/yourfriend8P"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition-colors"
               >
-                <FaTwitter className="w-4 h-4" />
+                <FaGithub className="w-4 h-4" />
               </a>
+
               <a
-                href="#"
-                className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition-colors"
-              >
-                <FaYoutube className="w-4 h-4" />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/yourfriend._.o/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition-colors"
               >
                 <FaInstagram className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/Praba1.shakya"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white/20 hover:bg-white/30 p-2 rounded-full transition-colors"
               >
                 <FaFacebook className="w-4 h-4" />
@@ -65,32 +69,61 @@ export default function Footer() {
             <h4 className="font-bold text-base mb-4">Quick Links</h4>
             <ul className="flex flex-col gap-2 text-sm text-white/80">
               <li>
-                <a href="#home" className="hover:text-white transition-colors">
+                <a
+                  onClick={() =>
+                    document.getElementById("home")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-white transition-colors">
+                <a
+                  onClick={() =>
+                    document.getElementById("about")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
                   About Me
                 </a>
               </li>
               <li>
                 <a
-                  href="#projects"
-                  className="hover:text-white transition-colors"
+                  onClick={() =>
+                    document.getElementById("projects")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="hover:text-white transition-colors cursor-pointer"
                 >
                   My Projects
                 </a>
               </li>
               <li>
-                <a href="#blog" className="hover:text-white transition-colors">
+                <a
+                  onClick={() =>
+                    document.getElementById("blog")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
                   Blogs & Articles
                 </a>
               </li>
               <li>
                 <a
-                  href="#contact"
-                  className="hover:text-white transition-colors"
+                  onClick={() =>
+                    document.getElementById("contact")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="hover:text-white transition-colors cursor-pointer"
                 >
                   Contact Me
                 </a>
@@ -103,28 +136,61 @@ export default function Footer() {
             <h4 className="font-bold text-base mb-4">Projects</h4>
             <ul className="flex flex-col gap-2 text-sm text-white/80">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  E-Commerce Landing Page
+                <a
+                  onClick={() =>
+                    document.getElementById("projects")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  TickTockDo
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Accounting System SaaS
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  onClick={() =>
+                    document.getElementById("projects")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
                   Ride Sharing App
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Business Networking Application
+                <a
+                  onClick={() =>
+                    document.getElementById("projects")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Project 2
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Restaurant Management System
+                <a
+                  onClick={() =>
+                    document.getElementById("projects")?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Project 3
+                </a>
+              </li>
+              <li>
+                <a
+                  Ride
+                  Sharing
+                  App
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Project 4
                 </a>
               </li>
             </ul>

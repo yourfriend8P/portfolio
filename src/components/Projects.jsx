@@ -1,11 +1,25 @@
+import TickTockDoImg from "../assets/TickTockDo.png";
+import RideSharingImg from "../assets/RideSharing.jpg";
 const projects = [
   {
-    title: "Project 5",
+    title: "TickTockDo",
     tags: ["JavaScript", "Tailwind CSS"],
-    desc: "Lorem ipsum dolor sit amet consectetur. Vitae quisque lorem porta morbi tellus. Magna sit molestie maecenas sed viverra phasellus. Posuere egestas auctor mauris magna massa ac aliquet dignissim mi. ",
+    desc: "A cozy pixel art productivity app built with React + Vite. Combines a todo list and pomodoro timer in one place, with a warm brown/beige pixel aesthetic, custom pixel fonts, sound effects, lofi music player, and localStorage persistence.",
+    image: TickTockDoImg,
+    link: "https://tick-tock-do.vercel.app/todo",
   },
-  { title: "Project 4", tags: ["Python", "Bootstrap"], desc: "..." },
-  { title: "Project 3", tags: ["Ruby", "Material UI"], desc: "..." },
+  {
+    title: "Ride Sharing App Prototype",
+    tags: ["Figma", "Prototyping"],
+    desc: "A clean and user-friendly ride-booking mobile app designed in Figma, featuring onboarding, authentication, ride booking, and a streamlined user experience.",
+    image: RideSharingImg,
+    link: "https://www.figma.com/proto/vOsSLYuikdhWqCqAhJJZuw/Driver-Booking-App?node-id=0-1&t=Fcg6sLazVfkD6CiT-1",
+  },
+  {
+    title: "Project 3",
+    tags: ["Ruby", "Material UI"],
+    desc: ".A cozy pixel art productivity app built with React + Vite. Combines a todo list and pomodoro timer in one place, with a warm brown/beige pixel aesthetic, custom pixel fonts, sound effects, lofi music player, and localStorage persistence.",
+  },
 ];
 
 export default function Projects() {
@@ -17,14 +31,15 @@ export default function Projects() {
           View All →
         </a>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-full">
         {projects.map((p) => (
           <div
             key={p.title}
             className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow"
           >
-            <div className="bg-blue-50 rounded-xl h-40 mb-4" />{" "}
-            {/* project image */}
+            <div className="bg-blue-50 rounded-xl h-50 mb-4">
+              <img src={p.image} className="h-full w-full" />
+            </div>
             <div className="flex gap-2 mb-2">
               {p.tags.map((t) => (
                 <span
@@ -37,9 +52,14 @@ export default function Projects() {
             </div>
             <h3 className="font-semibold text-base">{p.title}</h3>
             <p className="text-gray-500 text-sm mt-1 line-clamp-3">{p.desc}</p>
-            <button className="w-full mt-4 bg-green-brand text-white py-2 rounded-lg text-sm font-medium">
-              View Project
-            </button>
+            <a href={p.link} target="_blank" rel="noopener noreferrer">
+              <button
+                className="w-full mt-4 bg-green-brand text-white py-2 rounded-lg text-sm font-medium hover:bg-green-dark  transition-all duration-300 ease-in-out
+  hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(33,198,142,0.5)] cursor-pointer"
+              >
+                View Project
+              </button>
+            </a>
           </div>
         ))}
       </div>

@@ -49,7 +49,7 @@ export default function Contact() {
           />
           <button
             className="bg-green-brand text-white py-3 rounded-lg font-semibold w-full hover:bg-green-dark  transition-all duration-300 ease-in-out
-  hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(33,198,142,0.5)]"
+  hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(33,198,142,0.5)] cursor-pointer"
           >
             Submit
           </button>
