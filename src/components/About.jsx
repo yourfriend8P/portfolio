@@ -14,7 +14,7 @@ const skills = [
 export default function About() {
   return (
     <section
-      className="relative overflow-hidden px-6 md:px-16 py-20 grid md:grid-cols-3 gap-15 items-center justify-items-center min-h-[80vh]"
+      className="relative overflow-hidden px-6 md:px-32 py-20 grid md:grid-cols-3 gap-15 items-center justify-items-center min-h-[80vh]"
       id="about"
     >
       {/* Left: Text */}

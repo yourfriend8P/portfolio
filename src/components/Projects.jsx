@@ -1,5 +1,6 @@
-import TickTockDoImg from "../assets/TickTockDo.png";
-import RideSharingImg from "../assets/RideSharing.jpg";
+import TickTockDoImg from "../assets/projects/TickTockDo.png";
+import RideSharingImg from "../assets/projects/RideSharing.jpg";
+import WireframeImg from "../assets/projects/Wireframe.png";
 const projects = [
   {
     title: "TickTockDo",
@@ -16,15 +17,17 @@ const projects = [
     link: "https://www.figma.com/proto/vOsSLYuikdhWqCqAhJJZuw/Driver-Booking-App?node-id=0-1&t=Fcg6sLazVfkD6CiT-1",
   },
   {
-    title: "Project 3",
-    tags: ["Ruby", "Material UI"],
-    desc: ".A cozy pixel art productivity app built with React + Vite. Combines a todo list and pomodoro timer in one place, with a warm brown/beige pixel aesthetic, custom pixel fonts, sound effects, lofi music player, and localStorage persistence.",
+    title: "Wireframe To High-Fedelity design",
+    tags: ["Figma"],
+    desc: "Designed and prototyped a personal portfolio website in Figma, progressing from low-fidelity wireframes to a polished high-fidelity UI with a calm, nature-inspired aesthetic.",
+    image: WireframeImg,
+    link: "https://www.figma.com/proto/B0R3WIk1yb0rLJ9i7ViLhr/Portfolio-Design?node-id=91-272&t=WIIktAMcGwMB8hMO-1",
   },
 ];
 
 export default function Projects() {
   return (
-    <section className="px-6 md:px-16 py-20" id="projects">
+    <section className="px-6 md:px-32 py-20" id="projects">
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-2xl font-bold">My Previous Projects</h2>
         <a href="#" className="text-sm text-green-brand font-medium">

@@ -4,10 +4,10 @@ import { PiChatCircleBold } from "react-icons/pi";
 export default function Contact() {
   return (
     <section
-      className="px-6 md:px-16 pt-20 pb-30 grid md:grid-cols-2 gap-16 items-start relative overflow-hidden"
+      className="px-6 md:px-32 pt-20 pb-30 grid md:grid-cols-2 gap-16 items-start relative overflow-hidden"
       id="contact"
     >
-      <div className="flex flex-col gap-8 h-full justify-center p-16">
+      <div className="flex flex-col gap-8 h-full justify-center">
         <PiChatCircleBold className="text-green-brand w-[50px] h-[50px]" />
         <h2 className="text-2xl font-bold">
           Let's build something <br />

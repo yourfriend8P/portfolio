@@ -1,12 +1,36 @@
 // components/Hero.jsx
 
 export default function Hero() {
+  const Cloud = ({ className, size = 1 }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={(101 / 1.5) * size}
+      height={(54 / 1.5) * size}
+      viewBox="0 0 101 54"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M20.532 24.6732C20.532 15.7504 27.7653 8.51707 36.6881 8.51707H38.9671C41.7063 3.2814 47.1264 0 53.0353 0H53.5097C58.862 0 63.8883 2.57134 67.0203 6.91158L70.333 11.5024C77.9809 11.5024 84.3455 17.3782 84.9554 25.0017L85.2734 28.9756H88.4878C95.3981 28.9756 101 34.5775 101 41.4878C101 48.3981 95.3981 54 88.4878 54H14.6634C6.56504 54 0 47.435 0 39.3366C0 31.2382 6.56503 24.6732 14.6634 24.6732H20.532Z"
+        fill="#E2F0FB"
+      />
+    </svg>
+  );
   return (
     <section
       className="relative text-center pt-20 pb-0 overflow-hidden min-h-[90vh] flex flex-col items-center justify-center"
       id="home"
     >
       {/* Clouds (use absolute positioned divs or SVG) */}
+      <div className="absolute top-16 left-10 cloud-1 hidden md:block">
+        <Cloud size={1} />
+      </div>
+      <div className="absolute top-8 right-64 cloud-2">
+        <Cloud size={0.7} />
+      </div>
+      <div className="absolute top-32 right-10 cloud-3 hidden md:block">
+        <Cloud size={1.2} />
+      </div>
       <p className="text-green-brand text-sm font-semibold tracking-widest uppercase">
         UI/UX Designer & CS Student
       </p>
@@ -33,8 +57,8 @@ export default function Hero() {
           className="border border-gray-800 px-6 py-3 rounded-full font-medium cursor-pointer  hover:bg-green-dark hover:text-white  hover:border-green-dark transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(33,198,142,0.5)]"
           onClick={() => {
             const link = document.createElement("a");
-            link.href = "/resume.pdf";
-            link.download = "PrabalShakyaCV.pdf";
+            link.href = "https://www.shakyaprabal.com.np/PrabalShakyaCV.pdf";
+            link.target = "_blank";
             link.click();
           }}
         >

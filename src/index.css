@@ -24,3 +24,43 @@
 .float-animation {
   animation: float 3s ease-in-out infinite;
 }
+
+@keyframes floatCloud1 {
+  0%,
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(15px) translateY(-10px);
+  }
+}
+
+@keyframes floatCloud2 {
+  0%,
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(-12px) translateY(-8px);
+  }
+}
+
+@keyframes floatCloud3 {
+  0%,
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(10px) translateY(-12px);
+  }
+}
+
+.cloud-1 {
+  animation: floatCloud1 6s ease-in-out infinite;
+}
+.cloud-2 {
+  animation: floatCloud2 8s ease-in-out infinite;
+}
+.cloud-3 {
+  animation: floatCloud3 7s ease-in-out infinite;
+}
