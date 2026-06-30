@@ -1,7 +1,31 @@
 import { MdMailOutline } from "react-icons/md";
 import { GrLocation } from "react-icons/gr";
 import { PiChatCircleBold } from "react-icons/pi";
+import { useState } from "react";
+
 export default function Contact() {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+    formData.append("access_key", "f1504cfc-8e49-4583-906f-f78940ccfe40");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      setResult("Error");
+    }
+  };
+
   return (
     <section
       className="px-6 md:px-32 pt-20 pb-30 grid md:grid-cols-2 gap-16 items-start relative overflow-hidden"
@@ -29,32 +53,49 @@ export default function Contact() {
       </div>
       <div className="flex flex-col h-full justify-center gap-5">
         <h3 className="text-xl font-bold text-green-brand">Contact Me</h3>
-        <div className="flex flex-col gap-4">
+
+        <form className="flex flex-col gap-4" onSubmit={onSubmit}>
           <input
+            type="text"
+            name="name"
+            required
             className="border border-gray-200 rounded-lg px-4 py-3 text-sm w-full"
             placeholder="Full Name"
           />
           <input
+            type="number"
+            name="phno"
+            required
             className="border border-gray-200 rounded-lg px-4 py-3 text-sm w-full"
             placeholder="Phone No"
           />
           <input
+            type="email"
+            name="email"
+            required
             className="border border-gray-200 rounded-lg px-4 py-3 text-sm w-full"
             placeholder="Email Address"
           />
           <textarea
+            name="message"
+            required
             rows={5}
             className="border border-gray-200 rounded-lg px-4 py-3 text-sm w-full resize-none"
             placeholder="Message"
           />
           <button
+            type="submit"
             className="bg-green-brand text-white py-3 rounded-lg font-semibold w-full hover:bg-green-dark  transition-all duration-300 ease-in-out
   hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(33,198,142,0.5)] cursor-pointer"
           >
             Submit
           </button>
-        </div>
+          <span className="text-[12px] text-green-brand font-medium">
+            {result}
+          </span>
+        </form>
       </div>
+
       <svg
         className="absolute bottom-0 left-0 w-1/2"
         viewBox="0 0 456 80"
