@@ -18,15 +18,17 @@ export default function About() {
       id="about"
     >
       {/* Left: Text */}
-      <div className="flex flex-col gap-8 ml-1">
-        <p className="text-sm font-semibold">About Me</p>
+      <div className="flex flex-col gap-8 ml-1 ">
+        <p className="text-sm font-bold dark:text-[#3ECF8E]">About Me</p>
         <div className="flex flex-col gap-6">
-          <p className="text-sm font-medium">Hi there, I'm</p>
-          <h2 className="text-5xl font-bold">
+          <p className="text-sm font-medium dark:text-[#9BA6A1]">
+            Hi there, I'm
+          </p>
+          <h2 className="text-5xl font-bold dark:text-[#EDEFEC]">
             PRABAL <br />
             SHAKYA
           </h2>
-          <p className="text-gray-500 text-sm leading-relaxed">
+          <p className="text-gray-500 text-sm leading-relaxed dark:text-[#9BA6A1]">
             A Computer Science student passionate about UI/UX design, pixel art,
             and creating visually engaging digital experiences, with
             project-based experience in C++, JavaScript, and React Development
@@ -34,14 +36,35 @@ export default function About() {
         </div>
         <div className="flex gap-3">
           <button
-            className="bg-green-brand text-white px-5 py-2 rounded-full text-sm hover:bg-green-dark cursor-pointer  transition-all duration-300 ease-in-out
-  hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(33,198,142,0.5)]"
+            className="
+            bg-green-brand 
+            text-white px-5 py-2 
+            rounded-full 
+            text-sm 
+            transition-all 
+            duration-300 
+            ease-in-out
+            hover:bg-green-dark 
+            hover-raise 
+            hover:shadow-(--glow)
+            cursor-pointer
+            dark:text-black"
           >
             Contact Me
           </button>
           <button
-            className="border border-gray-300 px-5 py-2 rounded-full text-sm  transition-all duration-300 ease-in-out
-  hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(33,198,142,0.5)] hover:ring-1"
+            className="
+            border 
+            border-gray-300 
+            px-5 py-2 
+            rounded-full 
+            text-sm  
+            transition-all duration-300 ease-in-out
+            hover-raise
+            hover:shadow-(--glow) 
+             hover:border-[#3ECF8E]
+            hover:text-green-dark 
+            dark:text-[#EDEFEC]"
           >
             Learn More
           </button>
@@ -49,7 +72,7 @@ export default function About() {
       </div>
 
       {/* Center: Profile card */}
-      <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center relative w-100 h-130]">
+      <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center relative w-100 h-130] dark:bg-[#1B2220]">
         {/* Social icons top-right */}
         <div className="absolute top-8 right-8 flex flex-col gap-3">
           <a
@@ -111,7 +134,7 @@ export default function About() {
         ))}
       </div>
       <svg
-        className="absolute left-0 top-0 h-full w-auto hidden md:block"
+        className="absolute left-0 top-0 h-full w-auto hidden md:block text-[#E2F0FB] dark:text-[#12261F]"
         viewBox="-31 0 155 912"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -119,12 +142,12 @@ export default function About() {
       >
         <path
           d="M77.475 814.447C74.269 807.725 72.6053 800.371 72.6053 792.924L72.6053 741.957C72.6053 722.688 67.0385 703.83 56.5745 687.651L37.3838 657.978C32.1518 649.888 29.3684 640.459 29.3684 630.825L29.3684 600.707C29.3684 579.922 22.8915 559.653 10.8384 542.719L-31 483.939L-31 0L-31 912H124L77.475 814.447Z"
-          fill="#E2F0FB"
+          fill="currentColor"
         />
       </svg>
 
       <svg
-        className="absolute right-0 top-0 h-full w-auto hidden md:block"
+        className="absolute right-0 top-0 h-full w-auto hidden md:block text-[#E2F0FB] dark:text-[#12261F]"
         viewBox="-31 0 155 912"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +156,7 @@ export default function About() {
       >
         <path
           d="M77.475 814.447C74.269 807.725 72.6053 800.371 72.6053 792.924L72.6053 741.957C72.6053 722.688 67.0385 703.83 56.5745 687.651L37.3838 657.978C32.1518 649.888 29.3684 640.459 29.3684 630.825L29.3684 600.707C29.3684 579.922 22.8915 559.653 10.8384 542.719L-31 483.939L-31 0L-31 912H124L77.475 814.447Z"
-          fill="#E2F0FB"
+          fill="currentColor"
         />
       </svg>
     </section>

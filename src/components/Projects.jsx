@@ -28,7 +28,7 @@ const projects = [
 export default function Projects() {
   return (
     <section className="px-6 md:px-32 py-20" id="projects">
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center mb-8 dark:text-[#EDEFEC]">
         <h2 className="text-2xl font-bold">My Previous Projects</h2>
         <a href="#" className="text-sm text-green-brand font-medium">
           View All →
@@ -38,7 +38,7 @@ export default function Projects() {
         {projects.map((p) => (
           <div
             key={p.title}
-            className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow"
+            className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md hover-raise hover:ring-1 hover:ring-green-brand transition-all duration-300 ease-in-out dark:bg-[#151B19]"
           >
             <div className="bg-blue-50 rounded-xl h-50 mb-4">
               <img src={p.image} className="h-full w-full" />
@@ -47,18 +47,34 @@ export default function Projects() {
               {p.tags.map((t) => (
                 <span
                   key={t}
-                  className="text-xs bg-gray-100 px-2 py-1 rounded-full"
+                  className="text-xs bg-gray-100 px-2 py-1 rounded-full dark:bg-[#1B2220] dark:text-[#EDEFEC]"
                 >
                   {t}
                 </span>
               ))}
             </div>
-            <h3 className="font-semibold text-base">{p.title}</h3>
-            <p className="text-gray-500 text-sm mt-1 line-clamp-3">{p.desc}</p>
+            <h3 className="font-semibold text-base dark:text-[#EDEFEC]">
+              {p.title}
+            </h3>
+            <p className="text-gray-500 text-sm mt-1 line-clamp-3 dark:text-[#9BA6A1]">
+              {p.desc}
+            </p>
             <a href={p.link} target="_blank" rel="noopener noreferrer">
               <button
-                className="w-full mt-4 bg-green-brand text-white py-2 rounded-lg text-sm font-medium hover:bg-green-dark  transition-all duration-300 ease-in-out
-  hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(33,198,142,0.5)] cursor-pointer"
+                className="
+                w-full mt-4 
+                bg-green-brand 
+                text-white 
+                py-2 
+                rounded-lg 
+                text-sm 
+                font-medium 
+                hover:bg-green-dark  
+                transition-all duration-300 ease-in-out
+                hover-raise 
+                hover:shadow-(--glow) 
+                cursor-pointer
+                dark:text-black"
               >
                 View Project
               </button>

@@ -10,7 +10,7 @@ import Logo from "../assets/logo.png"; // your corgi logo
 
 export default function Footer() {
   return (
-    <footer className="bg-[#21C68E] text-white">
+    <footer className="bg-[#21C68E] text-white dark:bg-green-brand-dark">
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Top grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
