@@ -39,7 +39,7 @@ export default function Contact() {
         </h2>
         <p className="text-gray-500 text-sm w-100 dark:text-[#9BA6A1]">
           Open to freelance projects, collaborations, and internship
-          opportunities. I respond within 24 hours. opportunities.
+          opportunities. I respond within 24 hours.
         </p>
         <div className="dark:text-[#EDEFEC] flex flex-col gap-3 justify-items-start">
           <div className="text-sm flex flex-row items-center gap-[6px] ">
