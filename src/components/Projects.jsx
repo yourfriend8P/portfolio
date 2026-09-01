@@ -30,7 +30,15 @@ export default function Projects() {
     <section className="px-6 md:px-32 py-20" id="projects">
       <div className="flex justify-between items-center mb-8 dark:text-[#EDEFEC]">
         <h2 className="text-2xl font-bold">My Previous Projects</h2>
-        <a href="#" className="text-sm text-green-brand font-medium">
+        <a
+          className="text-sm text-green-brand font-medium cursor-pointer"
+          onClick={() => {
+            const link = document.createElement("a");
+            link.href = "https://www.shakyaprabal.com.np/Projects.pdf";
+            link.target = "_blank";
+            link.click();
+          }}
+        >
           View All →
         </a>
       </div>

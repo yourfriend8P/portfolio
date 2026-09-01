@@ -104,7 +104,7 @@ export default function Footer() {
                   My Projects
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   onClick={() =>
                     document.getElementById("blog")?.scrollIntoView({
@@ -115,7 +115,7 @@ export default function Footer() {
                 >
                   Blogs & Articles
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   onClick={() =>
@@ -168,10 +168,10 @@ export default function Footer() {
                   }
                   className="hover:text-white transition-colors cursor-pointer"
                 >
-                  Project 2
+                  Wireframe To High-Fedelity design
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   onClick={() =>
                     document.getElementById("projects")?.scrollIntoView({
@@ -192,7 +192,7 @@ export default function Footer() {
                 >
                   Project 4
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

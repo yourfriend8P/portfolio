@@ -29,9 +29,11 @@ export default function About() {
             SHAKYA
           </h2>
           <p className="text-gray-500 text-sm leading-relaxed dark:text-[#9BA6A1]">
-            A Computer Science student passionate about UI/UX design, pixel art,
-            and creating visually engaging digital experiences, with
-            project-based experience in C++, JavaScript, and React Development
+            Computer Science student passionate about frontend development,
+            UI/UX design, and creating visually engaging digital experiences
+            with project-based experience with C++, JavaScript, and React, along
+            with some experience working collaboratively on backend development
+            and full-stack projects.
           </p>
         </div>
         <div className="flex gap-3">
@@ -49,6 +51,11 @@ export default function About() {
             hover:shadow-(--glow)
             cursor-pointer
             dark:text-black"
+            onClick={() =>
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+              })
+            }
           >
             Contact Me
           </button>
@@ -64,7 +71,14 @@ export default function About() {
             hover:shadow-(--glow) 
              hover:border-[#3ECF8E]
             hover:text-green-dark 
-            dark:text-[#EDEFEC]"
+            dark:text-[#EDEFEC]
+            cursor-pointer"
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "https://www.shakyaprabal.com.np/PrabalShakyaCV.pdf";
+              link.target = "_blank";
+              link.click();
+            }}
           >
             Learn More
           </button>

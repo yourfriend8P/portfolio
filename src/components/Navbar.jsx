@@ -24,9 +24,9 @@ export default function Navbar() {
         <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
           <a href="#projects">Projects</a>
         </li>
-        <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
+        {/* <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
           <a href="#blog">Blog</a>
-        </li>
+        </li> */}
       </ul>
       <div className="flex items-center gap-3">
         <button
