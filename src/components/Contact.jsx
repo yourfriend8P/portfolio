@@ -44,7 +44,7 @@ export default function Contact() {
         <div className="dark:text-[#EDEFEC] flex flex-col gap-3 justify-items-start">
           <div className="text-sm flex flex-row items-center gap-[6px] ">
             <MdMailOutline className="text-green-brand h-5 w-5" />
-            prabalshakyall@gmail.com
+            prabalshakya11@gmail.com
           </div>
           <div className="text-sm flex flex-row items-center gap-[6px]">
             <GrLocation className="text-green-brand h-6 w-6" />

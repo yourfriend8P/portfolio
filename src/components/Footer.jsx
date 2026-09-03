@@ -22,8 +22,8 @@ export default function Footer() {
             <div>
               <h3 className="font-bold text-lg">Prabal Shakya</h3>
               <p className="text-sm text-white/80 mt-1 leading-relaxed">
-                UI/UX designer & CS student crafting calm, intentional digital
-                experiences.
+                UI/UX designer, Frontend Developer & CS student crafting calm,
+                intentional digital experiences.
               </p>
             </div>
             {/* Social icons */}

@@ -33,7 +33,7 @@ export default function Hero() {
         <Cloud size={1.2} />
       </div>
       <p className="text-green-brand text-sm font-semibold tracking-widest uppercase">
-        UI/UX Designer & CS Student
+        UI/UX Designer & Frontend Developer
       </p>
       <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mt-3 leading-tight  dark:text-[#EDEFEC]">
         Where Calm Meets Creativity
