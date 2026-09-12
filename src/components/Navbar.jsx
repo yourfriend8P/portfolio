@@ -2,6 +2,7 @@
 import { useTheme } from "../context/ThemeContext";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 
 export default function Navbar() {
@@ -16,17 +17,24 @@ export default function Navbar() {
       {/* Desktop links */}
       <ul className="hidden md:flex gap-8 text-sm font-medium text-gray-600 dark:text-[#9BA6A1]">
         <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
-          <a href="#home">Home</a>
+          <a href="/">Home</a>
         </li>
         <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
-          <a href="#about">About Me</a>
+          <a href="/#about">About Me</a>
         </li>
         <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
-          <a href="#projects">Projects</a>
+          <a href="/#projects">Projects</a>
         </li>
-        {/* <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
-          <a href="#blog">Blog</a>
-        </li> */}
+        <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
+          <Link
+            to="/gallery"
+            onClick={() =>
+              window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+            }
+          >
+            Gallery
+          </Link>
+        </li>
       </ul>
       <div className="flex items-center gap-3">
         <button
@@ -62,6 +70,14 @@ export default function Navbar() {
           <a href="#projects" onClick={() => setOpen(false)}>
             Projects
           </a>
+          <Link
+            to="/gallery"
+            onClick={() =>
+              window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+            }
+          >
+            Gallery
+          </Link>
           <a href="#contact" onClick={() => setOpen(false)}>
             Contact
           </a>

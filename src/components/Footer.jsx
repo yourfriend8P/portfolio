@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   FaLinkedin,
   FaTwitter,
@@ -104,18 +105,16 @@ export default function Footer() {
                   My Projects
                 </a>
               </li>
-              {/* <li>
-                <a
+              <li>
+                <Link
+                  to="/gallery"
                   onClick={() =>
-                    document.getElementById("blog")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
+                    window.scrollTo({ top: 0, left: 0, behavior: "instant" })
                   }
-                  className="hover:text-white transition-colors cursor-pointer"
                 >
-                  Blogs & Articles
-                </a>
-              </li> */}
+                  Gallery
+                </Link>
+              </li>
               <li>
                 <a
                   onClick={() =>
