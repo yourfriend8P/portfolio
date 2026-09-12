@@ -1,3 +1,9 @@
+import pixelenv from "../assets/gallery/pixelenv.jpeg";
+import sophpixelart from "../assets/gallery/sophpixelart.jpeg";
+import Potion from "../assets/gallery/Potion.png";
+import Weapons from "../assets/gallery/Weapons.png";
+import Knight from "../assets/gallery/Knight.gif";
+
 import { useState } from "react";
 
 const artworks = [
@@ -5,35 +11,35 @@ const artworks = [
     id: 1,
     title: "Pixel Landscape",
     category: "Pixel Art",
-    image: "/src/assets/gallery/pixelenv.jpeg",
+    image: pixelenv,
     desc: "A cozy pixel art landscape.",
   },
   {
     id: 2,
     title: "Pixel Potrait",
     category: "Pixel Art",
-    image: "/src/assets/gallery/sophpixelart.jpeg",
+    image: sophpixelart,
     desc: "A Pixel art character with dark hair and a simple outfit.",
   },
   {
     id: 3,
     title: "Potion",
     category: "Pixel Art",
-    image: "/src/assets/gallery/Potion.png",
+    image: Potion,
     desc: "Drink it to increase your HP",
   },
   {
     id: 4,
     title: "Pixel Weapons",
     category: "Pixel Art",
-    image: "/src/assets/gallery/Weapons.png",
+    image: Weapons,
     desc: "Choose your weapon",
   },
   {
     id: 5,
     title: "Knight",
     category: "Pixel Art",
-    image: "/src/assets/gallery/Knight.gif",
+    image: Knight,
     desc: "A pixel art knight swinging a sword",
   },
 ];
