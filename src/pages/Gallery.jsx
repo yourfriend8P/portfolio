@@ -3,6 +3,7 @@ import sophpixelart from "../assets/gallery/sophpixelart.jpeg";
 import Potion from "../assets/gallery/Potion.png";
 import Weapons from "../assets/gallery/Weapons.png";
 import Knight from "../assets/gallery/Knight.gif";
+import Chopper from "../assets/gallery/chopper.jpeg";
 
 import { useState } from "react";
 
@@ -10,41 +11,48 @@ const artworks = [
   {
     id: 1,
     title: "Pixel Landscape",
-    category: "Pixel Art",
+    category: "Artwork",
     image: pixelenv,
-    desc: "A cozy pixel art landscape.",
+    desc: "A cozy Artwork landscape.",
   },
   {
     id: 2,
     title: "Pixel Potrait",
-    category: "Pixel Art",
+    category: "Artwork",
     image: sophpixelart,
-    desc: "A Pixel art character with dark hair and a simple outfit.",
+    desc: "A Artwork character with dark hair and a simple outfit.",
   },
   {
     id: 3,
     title: "Potion",
-    category: "Pixel Art",
+    category: "Artwork",
     image: Potion,
     desc: "Drink it to increase your HP",
   },
   {
     id: 4,
     title: "Pixel Weapons",
-    category: "Pixel Art",
+    category: "Artwork",
     image: Weapons,
     desc: "Choose your weapon",
   },
   {
     id: 5,
     title: "Knight",
-    category: "Pixel Art",
+    category: "Artwork",
     image: Knight,
     desc: "A pixel art knight swinging a sword",
   },
+  {
+    id: 6,
+    title: "Choppaimon",
+    category: "Artwork",
+    image: Chopper,
+    desc: "Chopper from One Piece",
+  },
 ];
 
-const categories = ["All", "Pixel Art", "UI Design", "Illustration"];
+const categories = ["All", "Artwork", "UI Design", "Illustration"];
 
 export default function Gallery() {
   const [active, setActive] = useState("All");
@@ -127,7 +135,7 @@ export default function Gallery() {
             <img
               src={selected.image}
               alt={selected.title}
-              className="w-full max-h-[500px] object-cover"
+              className="w-full max-h-125 object-cover"
             />
             <div className="p-6">
               <span className="text-xs text-green-brand font-medium">

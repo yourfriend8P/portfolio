@@ -70,40 +70,41 @@ export default function Footer() {
             <h4 className="font-bold text-base mb-4">Quick Links</h4>
             <ul className="flex flex-col gap-2 text-sm text-white/80">
               <li>
-                <a
+                <Link
+                  to="/"
                   onClick={() =>
-                    document.getElementById("home")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
+                    window.scrollTo({ top: 0, left: 0, behavior: "instant" })
                   }
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
+                  to="/"
                   onClick={() =>
-                    document.getElementById("about")?.scrollIntoView({
-                      behavior: "smooth",
+                    window.scrollTo({
+                      top: 0,
+                      left: 0,
+                      behavior: "instant",
                     })
                   }
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   About Me
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  onClick={() =>
-                    document.getElementById("projects")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
+                <Link
+                  to="/projects"
                   className="hover:text-white transition-colors cursor-pointer"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+                  }
                 >
                   My Projects
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
@@ -116,16 +117,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  onClick={() =>
-                    document.getElementById("contact")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
+                <Link
+                  to="/"
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   Contact Me
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

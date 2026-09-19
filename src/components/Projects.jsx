@@ -1,6 +1,8 @@
-import TickTockDoImg from "../assets/projects/TickTockDo.png";
+import TickTockDoImg from "../assets/projects/TickTockDo/TickTockDo.png";
 import RideSharingImg from "../assets/projects/RideSharing.jpg";
 import WireframeImg from "../assets/projects/Wireframe.png";
+
+import { Link } from "react-router-dom";
 const projects = [
   {
     title: "TickTockDo",
@@ -30,17 +32,15 @@ export default function Projects() {
     <section className="px-6 md:px-32 py-20" id="projects">
       <div className="flex justify-between items-center mb-8 dark:text-[#EDEFEC]">
         <h2 className="text-2xl font-bold">My Previous Projects</h2>
-        <a
+        <Link
+          to="/projects"
           className="text-sm text-green-brand font-medium cursor-pointer"
-          onClick={() => {
-            const link = document.createElement("a");
-            link.href = "https://www.shakyaprabal.com.np/Projects.pdf";
-            link.target = "_blank";
-            link.click();
-          }}
+          onClick={() =>
+            window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+          }
         >
           View All →
-        </a>
+        </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-full">
         {projects.map((p) => (

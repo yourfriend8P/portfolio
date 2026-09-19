@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
+import Projects from "./pages/Projects";
 import Home from "./pages/Home";
 import { useTheme } from "./context/ThemeContext";
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
       <Footer />
     </div>
