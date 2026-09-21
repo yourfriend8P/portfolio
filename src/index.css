@@ -1,14 +1,78 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-green-brand: #2ebd7b; /* primary CTA green */
+  --color-green-brand-dark: #1c4434;
   --color-green-dark: #1a9e63; /* hover state */
   --color-text-dark: #1a1a2e; /* headings */
   --color-text-muted: #6b7280; /* body copy */
   --color-bg: #f8f9fa; /* page background */
   --color-card: #ffffff;
-
+  --glow: 0 8px 20px rgba(33, 198, 142, 0.4);
+  --mint-glow: rgba(62, 207, 142, 0.18);
   --font-sans: "Montserrat", sans-serif;
+}
+
+.input {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 14px;
+  transition:
+    border-color 200ms ease-in-out,
+    box-shadow 200ms ease-in-out;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-green-brand);
+  box-shadow: 0 0 0 1px var(--color-green-brand);
+}
+
+.dark .input {
+  color: #6c7672;
+  background-color: #151b19;
+  border-color: #262e2b;
+}
+
+.dark .input:focus {
+  border-color: var(--color-green-brand);
+  box-shadow: 0 0 0 1px var(--color-green-brand);
+}
+
+/* Fix browser autofill background override */
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+  -webkit-text-fill-color: #1a1a2e;
+}
+
+.dark .input:-webkit-autofill,
+.dark .input:-webkit-autofill:hover,
+.dark .input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #151b19 inset;
+  -webkit-text-fill-color: #6c7672;
+}
+
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(33, 198, 142, 0.25) 0%,
+    rgba(33, 198, 142, 0.08) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
 }
 
 @keyframes float {
@@ -63,4 +127,14 @@
 }
 .cloud-3 {
   animation: floatCloud3 7s ease-in-out infinite;
+}
+
+@utility hover-raise {
+  /* Setup the smooth transition */
+  transition: transform 300ms ease-in-out;
+
+  /* Apply the movement on hover */
+  &:hover {
+    transform: translateY(-4px);
+  }
 }

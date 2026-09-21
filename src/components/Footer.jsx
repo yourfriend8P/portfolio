@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import {
   FaLinkedin,
   FaTwitter,
@@ -9,8 +11,24 @@ import {
 import Logo from "../assets/logo.png"; // your corgi logo
 
 export default function Footer() {
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToSection = (id) => {
+    setOpen(false);
+    if (location.pathname !== "/") {
+      // if on another page, go home first then scroll
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <footer className="bg-[#21C68E] text-white">
+    <footer className="bg-[#21C68E] text-white dark:bg-green-brand-dark">
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Top grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -22,8 +40,8 @@ export default function Footer() {
             <div>
               <h3 className="font-bold text-lg">Prabal Shakya</h3>
               <p className="text-sm text-white/80 mt-1 leading-relaxed">
-                UI/UX designer & CS student crafting calm, intentional digital
-                experiences.
+                UI/UX designer, Frontend Developer & CS student crafting calm,
+                intentional digital experiences.
               </p>
             </div>
             {/* Social icons */}
@@ -69,64 +87,52 @@ export default function Footer() {
             <h4 className="font-bold text-base mb-4">Quick Links</h4>
             <ul className="flex flex-col gap-2 text-sm text-white/80">
               <li>
-                <a
+                <Link
+                  to="/"
                   onClick={() =>
-                    document.getElementById("home")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
+                    window.scrollTo({ top: 0, left: 0, behavior: "instant" })
                   }
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  onClick={() =>
-                    document.getElementById("about")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
+                <button
+                  onClick={() => scrollToSection("about")}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   About Me
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  onClick={() =>
-                    document.getElementById("projects")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
+                <Link
+                  to="/projects"
                   className="hover:text-white transition-colors cursor-pointer"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+                  }
                 >
                   My Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
+                  to="/gallery"
                   onClick={() =>
-                    document.getElementById("blog")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
+                    window.scrollTo({ top: 0, left: 0, behavior: "instant" })
                   }
-                  className="hover:text-white transition-colors cursor-pointer"
                 >
-                  Blogs & Articles
-                </a>
+                  Gallery
+                </Link>
               </li>
               <li>
-                <a
-                  onClick={() =>
-                    document.getElementById("contact")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
+                <button
                   className="hover:text-white transition-colors cursor-pointer"
+                  onClick={() => scrollToSection("contact")}
                 >
                   Contact Me
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -168,10 +174,10 @@ export default function Footer() {
                   }
                   className="hover:text-white transition-colors cursor-pointer"
                 >
-                  Project 2
+                  Wireframe To High-Fedelity design
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   onClick={() =>
                     document.getElementById("projects")?.scrollIntoView({
@@ -192,7 +198,7 @@ export default function Footer() {
                 >
                   Project 4
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
