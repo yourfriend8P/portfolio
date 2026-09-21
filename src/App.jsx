@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-
+import { Analytics } from "@vercel/analytics/next";
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
 import Projects from "./pages/Projects";
@@ -17,6 +17,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
       </Routes>
       <Footer />
+      <Analytics />
     </div>
   );
 }
