@@ -32,19 +32,31 @@ export default function Navbar() {
       {/* Desktop links */}
       <ul className="hidden md:flex gap-8 text-sm font-medium text-gray-600 dark:text-[#9BA6A1]">
         <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
-          <button onClick={() => scrollToSection("home")}>Home</button>
+          <button
+            onClick={() => scrollToSection("home")}
+            className="cursor-pointer"
+          >
+            Home
+          </button>
         </li>
         <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
-          <button onClick={() => scrollToSection("about")}>About Me</button>
+          <button
+            onClick={() => scrollToSection("about")}
+            className="cursor-pointer"
+          >
+            About Me
+          </button>
         </li>
-        <Link
-          to="/projects"
-          onClick={() =>
-            window.scrollTo({ top: 0, left: 0, behavior: "instant" })
-          }
-        >
-          Projects
-        </Link>
+        <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
+          <Link
+            to="/projects"
+            onClick={() =>
+              window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+            }
+          >
+            Projects
+          </Link>
+        </li>
         {/* <li className="hover:text-green-dark  transition-all duration-300 ease-in-out">
           <button onClick={() => scrollToSection("projects")}>Projects</button>
         </li> */}
@@ -63,13 +75,23 @@ export default function Navbar() {
       <div className="flex items-center gap-3">
         <button
           className="bg-green-brand rounded-full px-5 py-2 text-sm font-medium hidden md:block shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] text-white cursor-pointer hover:bg-green-dark transition-all duration-300 ease-in-out"
+          // onClick={() =>
+          //   document.getElementById("contact")?.scrollIntoView({
+          //     behavior: "smooth",
+          //   })
+          // }
           onClick={() =>
-            document.getElementById("contact")?.scrollIntoView({
-              behavior: "smooth",
-            })
+            scrollToSection("contact").scrollIntoView({ behaviour: "smooth" })
           }
         >
           Contact Me
+        </button>
+        <button className="md:hidden" onClick={() => setOpen(!open)}>
+          {dark ? (
+            <div className="w-5 h-5 text-yellow-400">☰</div>
+          ) : (
+            <div className="w-5 h-5 text-gray-600">☰</div>
+          )}
         </button>
         <button
           onClick={() => setDark(!dark)}
@@ -82,17 +104,16 @@ export default function Navbar() {
           )}
         </button>
       </div>
-      <button className="md:hidden" onClick={() => setOpen(!open)}>
-        {dark ? (
-          <div className="w-5 h-5 text-yellow-400">☰</div>
-        ) : (
-          <div className="w-5 h-5 text-gray-600">☰</div>
-        )}
-      </button>
 
       {open && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center gap-6 py-8 md:hidden">
-          <a href="/#about" onClick={() => setOpen(false)}>
+          <a
+            href="/#about"
+            onClick={() => {
+              setOpen(false);
+              scrollToSection("about");
+            }}
+          >
             About Me
           </a>
           <Link
@@ -113,7 +134,13 @@ export default function Navbar() {
           >
             Gallery
           </Link>
-          <a href="/#contact" onClick={() => setOpen(false)}>
+          <a
+            href="/#contact"
+            onClick={() => {
+              setOpen(false);
+              scrollToSection("contact");
+            }}
+          >
             Contact
           </a>
         </div>

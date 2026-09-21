@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import {
   FaLinkedin,
   FaTwitter,
@@ -10,6 +11,22 @@ import {
 import Logo from "../assets/logo.png"; // your corgi logo
 
 export default function Footer() {
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToSection = (id) => {
+    setOpen(false);
+    if (location.pathname !== "/") {
+      // if on another page, go home first then scroll
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <footer className="bg-[#21C68E] text-white dark:bg-green-brand-dark">
       <div className="max-w-6xl mx-auto px-6 py-16">
@@ -81,19 +98,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/"
-                  onClick={() =>
-                    window.scrollTo({
-                      top: 0,
-                      left: 0,
-                      behavior: "instant",
-                    })
-                  }
+                <button
+                  onClick={() => scrollToSection("about")}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   About Me
-                </Link>
+                </button>
               </li>
               <li>
                 <Link
@@ -117,12 +127,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/"
+                <button
                   className="hover:text-white transition-colors cursor-pointer"
+                  onClick={() => scrollToSection("contact")}
                 >
                   Contact Me
-                </Link>
+                </button>
               </li>
             </ul>
           </div>

@@ -11,48 +11,48 @@ const artworks = [
   {
     id: 1,
     title: "Pixel Landscape",
-    category: "Artwork",
+    category: "Pixel Art",
     image: pixelenv,
-    desc: "A cozy Artwork landscape.",
+    desc: "A cozy pixel art landscape.",
   },
   {
     id: 2,
     title: "Pixel Potrait",
-    category: "Artwork",
+    category: "Pixel Art",
     image: sophpixelart,
-    desc: "A Artwork character with dark hair and a simple outfit.",
+    desc: "A Pixel art character with dark hair and a simple outfit.",
   },
   {
     id: 3,
     title: "Potion",
-    category: "Artwork",
+    category: "Pixel Art",
     image: Potion,
     desc: "Drink it to increase your HP",
   },
   {
     id: 4,
     title: "Pixel Weapons",
-    category: "Artwork",
+    category: "Pixel Art",
     image: Weapons,
     desc: "Choose your weapon",
   },
   {
     id: 5,
     title: "Knight",
-    category: "Artwork",
+    category: "Pixel Art",
     image: Knight,
     desc: "A pixel art knight swinging a sword",
   },
   {
     id: 6,
     title: "Choppaimon",
-    category: "Artwork",
+    category: "Digital Art",
     image: Chopper,
-    desc: "Chopper from One Piece",
+    desc: "Chopper from One",
   },
 ];
 
-const categories = ["All", "Artwork", "UI Design", "Illustration"];
+const categories = ["All", "Pixel Art", "UI Design", "Illustration"];
 
 export default function Gallery() {
   const [active, setActive] = useState("All");
